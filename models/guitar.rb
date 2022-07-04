@@ -1,7 +1,7 @@
 class Guitar
     attr_accessor :type, :model, :brand
 
-
+    @@all = []
 
     def initialize(type,model,brand)
         @type = type
@@ -9,5 +9,10 @@ class Guitar
         @brand = brand
     end 
 
+    def self.all 
+        @@all
+    end 
+
+    
 
 end 
