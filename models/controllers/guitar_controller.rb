@@ -4,4 +4,15 @@ class GuitarsController
         erb :index
     end 
 
+
+    def create
+
+    end 
+
+    def update
+
+    end 
+
+
+
 end 

@@ -1,0 +1,1 @@
+this will be a second version of my sinatra app from the Flatiron School curriculum. it is meant to test my knowledge of Sinatra and Module 2. This Web Application will use Sinatra to create a backend server and front end views a user can register and add guitars to a database.
