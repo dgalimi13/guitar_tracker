@@ -14,17 +14,22 @@ class BrandController < ApplicationController
         erb :"brands/show.html"
     end 
 
-    post '/consoles' do 
+    post '/brands' do 
         if params[:name] != ""
-        @console = Console.new
-        @console.name = params[:name]
-        @console.user = current_user
-        @console.save 
-            redirect '/consoles'
+        @brand = brand.new
+        @brand.name = params[:name]
+        @brand.user = current_user
+        @brand.save 
+            redirect '/brands'
         else 
-            erb :'consoles/new.html'
+            erb :'brands/new.html'
         end
     end 
+
+    delete "/consoles/:id" do
+        Console.destroy(params[:id])
+        redirect to "/consoles"
+    end
 
     
 
