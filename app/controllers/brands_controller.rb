@@ -31,6 +31,13 @@ class BrandController < ApplicationController
         redirect to "/brands"
     end
 
+    delete "/brands/:id/guitar" do
+        @brand = current_user.brands.find(params[:id])
+        @game = @brand.guitar.find(url: params[:url])
+        @game.destroy
+        redirect to "/brands/#{@brand.id}"
+      end
+
     
 
 end
