@@ -10,7 +10,7 @@ class BrandController < ApplicationController
     end  
 
     get '/brands/:id' do 
-        @console = current_user.brands.find(params[:id])
+        @brands = current_user.brands.find(params[:id])
         erb :"brands/show.html"
     end 
 
@@ -26,9 +26,9 @@ class BrandController < ApplicationController
         end
     end 
 
-    delete "/consoles/:id" do
-        Console.destroy(params[:id])
-        redirect to "/consoles"
+    delete "/brands/:id" do
+        Brand.destroy(params[:id])
+        redirect to "/brands"
     end
 
     
