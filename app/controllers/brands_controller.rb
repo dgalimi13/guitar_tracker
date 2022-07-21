@@ -14,4 +14,18 @@ class BrandController < ApplicationController
         erb :"brands/show.html"
     end 
 
+    post '/consoles' do 
+        if params[:name] != ""
+        @console = Console.new
+        @console.name = params[:name]
+        @console.user = current_user
+        @console.save 
+            redirect '/consoles'
+        else 
+            erb :'consoles/new.html'
+        end
+    end 
+
+    
+
 end
