@@ -9,6 +9,16 @@ class BrandController < ApplicationController
         erb :"brands/new.html"
     end  
 
+    get "/brands/:id/edit" do
+        @brand = current_user.brands.find(params[:id])
+        erb :"brands/edit.html"
+    end
+
+    post '/brands/:id' do 
+        @brand = current_user.brands.find(params[:id])
+        erb :"brands/show.html"
+    end 
+
     get '/brands/:id' do 
         @brands = current_user.brands.find(params[:id])
         erb :"brands/show.html"
