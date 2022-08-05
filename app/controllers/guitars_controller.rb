@@ -1,18 +1,10 @@
-class GuitarsController
+class GuitarsController < ApplicationController
 
-    def index
-        erb :index
+    delete "/guitars/:id" do
+    @guitar = guitar.find_by(id: params[:id])
+    @guitar.destroy
+    redirect to "/brands/#{ @guitar.brands.id }"
+    end
+    
+    
     end 
-
-
-    def create
-
-    end 
-
-    def update
-
-    end 
-
-
-
-end 
