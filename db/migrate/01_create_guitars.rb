@@ -1,4 +1,4 @@
-class CreateGuitars < ActiveRecord::Migration 
+class CreateGuitars < ActiveRecord::Migration[6.1] 
     def change 
         create_table :coupons do |t|
             t.string :type
