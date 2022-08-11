@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2) do
 
-  create_table "coupons", force: :cascade do |t|
+  create_table "guitars", force: :cascade do |t|
     t.string "type"
     t.string "model"
     t.string "brand"
