@@ -13,6 +13,12 @@ class Guitar
         @@all
     end 
 
+    def destroy
+        @@all.clear
+    end 
+
+    
+
     
 
 end 
